@@ -16,6 +16,14 @@ function operaciones(op)
             return (parseInt(n1) - parseInt(n2));
         },
 
+        multiplicar: function multiplicarNumeros(n1, n2) {
+            return (parseInt(n1) * parseInt(n2));
+        },
+
+        dividir: function dividirNumeros(n1, n2) {
+            return (parseInt(n1) / parseInt(n2));
+        }
+
 
     };
 
@@ -46,7 +54,13 @@ function operaciones(op)
                 var resultado = ops.restar(num1, num2);
                 alert (resultado);
                 break;
-          
+            case 'multiplicar':
+                var resultado = ops.multiplicar(num1, num2);
+                alert(resultado);
+                break;
+
+
+        }
     }
 
 }
@@ -56,7 +70,7 @@ function operaciones(op)
 
 <body>
 
-<h1>Script de Gabriel Hernandez Galian</h1>
+<h1>Operations de Francisco J. Hernández</h1>
 
 <form>
     Número 1: <input id="num1" type="number" />
@@ -64,7 +78,7 @@ function operaciones(op)
     <br /><br />
     <input type="button" value="SUMAR" onclick="operaciones('sumar'); return false;" /><br />
     <input type="button" value="RESTAR" onclick="operaciones('restar'); return false;" /><br />
-
+  
 </form>
 
 </body>
